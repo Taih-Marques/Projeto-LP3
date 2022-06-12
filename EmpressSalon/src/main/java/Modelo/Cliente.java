@@ -10,7 +10,7 @@ public class Cliente extends Pessoa{
     protected String endereco;
     protected String cep;
 
-    public Cliente(String endereco, String cep, int id, String nome, char sexo, String dataAniv, String telefone, String email, String cpf) {
+    public Cliente(int id, String nome, char sexo, String dataAniv, String telefone, String email, String cpf, String endereco, String cep) {
         super(id, nome, sexo, dataAniv, telefone, email, cpf);
         this.endereco = endereco;
         this.cep = cep;

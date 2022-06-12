@@ -5,8 +5,10 @@
 package Controladores;
 
 import Controladores.ajudah.LoginHelper;
+import Modelo.DAO.UsuarioDAO;
 import Modelo.Usuario;
 import View.Login;
+import View.Menu;
 
 /**
  *
@@ -26,6 +28,16 @@ public class LoginControl {
         Usuario usuario = helper.obterModel();
        
         //pesquisar no banco
+           UsuarioDAO usuarioDAO = new UsuarioDAO();
+           Usuario  usuarioAutenticado = usuarioDAO.selectPorNomeESenha(usuario);
+           
+       if(usuarioAutenticado != null){
+           //navegar para menu
+           Menu menu = new Menu();
+           menu.setVisible(true);
+       }else{
+           view.exibeMensagem("Usuario ou senha invalidos");
+       }
         //se ambos forem iguais, redirecionar pro menu
         // se nao, mostrar msg de usuario ou senha incorreta
         
