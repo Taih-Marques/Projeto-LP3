@@ -6,6 +6,8 @@ package View;
 
 import Controladores.LoginControl;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 /**
  *
@@ -94,8 +96,8 @@ public class Login extends javax.swing.JFrame {
 
     private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
         // executa botao entrar
-  
-        this.controladores.fizTarefa();
+           this.controladores.fizTarefa();
+         
     }//GEN-LAST:event_EntrarActionPerformed
 
     /**
@@ -148,4 +150,21 @@ public class Login extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, mensagem);
       
     }
+
+    public JPasswordField getSenhaUsuario() {
+        return SenhaUsuario;
+    }
+
+    public void setSenhaUsuario(JPasswordField SenhaUsuario) {
+        this.SenhaUsuario = SenhaUsuario;
+    }
+
+    public JTextField getCampoUsuario() {
+        return campoUsuario;
+    }
+
+    public void setCampoUsuario(JTextField campoUsuario) {
+        this.campoUsuario = campoUsuario;
+    }
+    
 }

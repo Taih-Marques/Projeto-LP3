@@ -9,13 +9,14 @@ import Modelo.Servico;
 import Modelo.Usuario;
 import Modelo.Agendamento;
 
-
 /**
  *
  * @author Tay
  */
 public class Main {
     public static void main (String[] args){
+        Login frm = new Login();
+        frm.setVisible(true);
     
         String nome= "tayh";
         System.out.println(nome);
@@ -30,6 +31,9 @@ public class Main {
         Agendamento agen = new Agendamento(1,clien, corte,30, "08/02/2023 10:00");
         System.out.println(agen);
         System.out.println(agen.getCliente().getNome());
+        
+
+
         
     }
 }
