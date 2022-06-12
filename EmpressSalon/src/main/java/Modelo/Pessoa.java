@@ -4,13 +4,18 @@
  */
 package Modelo;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Tay
  */
-public class Pessoa {
+abstract public class Pessoa {
+
     protected int id;
     protected String nome;
     protected char sexo;
@@ -24,11 +29,15 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public Pessoa(int id, String nome, char sexo, Date dataAniv, String telefone, String email, String cpf) {
+    public Pessoa(int id, String nome, char sexo, String dataAniv, String telefone, String email, String cpf) {
         this.id = id;
         this.nome = nome;
         this.sexo = sexo;
-        this.dataAniv = dataAniv;
+        try {
+            this.dataAniv = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(dataAniv);
+        } catch (ParseException ex) {
+            Logger.getLogger(Pessoa.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.telefone = telefone;
         this.email = email;
         this.cpf = cpf;
@@ -89,6 +98,5 @@ public class Pessoa {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-    
-    
+
 }
