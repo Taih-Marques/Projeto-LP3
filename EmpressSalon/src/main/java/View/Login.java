@@ -33,7 +33,6 @@ public class Login extends javax.swing.JFrame {
         Login = new javax.swing.JLabel();
         FundoTransparente = new javax.swing.JLabel();
         Logo = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -67,9 +66,6 @@ public class Login extends javax.swing.JFrame {
         Logo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Logo.jpg"))); // NOI18N
         getContentPane().add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, -1));
-
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -121,6 +117,5 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField SenhaUsuario;
     private javax.swing.JLabel Usuario;
     private javax.swing.JTextField campoUsuario;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
