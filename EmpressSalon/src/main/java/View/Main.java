@@ -20,7 +20,10 @@ public class Main {
         System.out.println(nome);
         Servico corte = new Servico(1,"corte",30);
         System.out.println(corte.getDescricao());
-        Cliente clien = new Cliente(1,"taih",'f',"90445","tajshdjasd");
+        Cliente clien = new Cliente(1,"taih","90445","tajshdjasd");
         System.out.println(clien);
+        Usuario usu= new Usuario(1, "taih","dagsdja");
+        System.out.println(usu);
+        
     }
 }
