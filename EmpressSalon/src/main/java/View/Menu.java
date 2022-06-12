@@ -37,7 +37,7 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        FundoMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/AgendaFundo.png"))); // NOI18N
+        FundoMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AgendaFundo.png"))); // NOI18N
 
         Cadastro.setText("Cadastro");
 

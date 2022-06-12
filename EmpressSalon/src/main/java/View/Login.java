@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package View;
 
 import Controladores.LoginControl;
@@ -82,11 +78,11 @@ public class Login extends javax.swing.JFrame {
         Login.setText("Login");
         getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, -1, -1));
 
-        FundoTransparente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
+        FundoTransparente.setIcon(new javax.swing.ImageIcon("C:\\Users\\Tay\\Documents\\GitHub\\Projeto-LP3\\EmpressSalon\\src\\main\\resources\\View\\imagens\\Agenda-PainelFundo.png")); // NOI18N
         getContentPane().add(FundoTransparente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 260, 190));
 
         Logo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Logo.jpg"))); // NOI18N
+        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.jpg"))); // NOI18N
         getContentPane().add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, -1));
 
         pack();

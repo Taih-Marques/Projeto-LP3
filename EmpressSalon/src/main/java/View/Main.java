@@ -15,10 +15,7 @@ import Modelo.Agendamento;
  */
 public class Main {
     public static void main (String[] args){
-        Login frm = new Login();
-        frm.setVisible(true);
-        Menu menu = new Menu();
-        menu.setVisible(true);
+      
     
         String nome= "tayh";
         System.out.println(nome);
