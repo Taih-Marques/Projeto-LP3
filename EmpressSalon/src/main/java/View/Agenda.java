@@ -181,10 +181,10 @@ public class Agenda extends javax.swing.JFrame {
         jLabel1.setText("AGENDA");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 130, -1));
 
-        frameAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
+        frameAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Agenda-PainelFundo.png"))); // NOI18N
         getContentPane().add(frameAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 30, 1010, 520));
 
-        fundoAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/salao.png"))); // NOI18N
+        fundoAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/salao.png"))); // NOI18N
         getContentPane().add(fundoAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 592));
 
         pack();

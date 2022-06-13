@@ -41,15 +41,15 @@ public class Menu extends javax.swing.JFrame {
 
         Cadastro.setText("Cadastro");
 
-        Cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/female-hair-shape-and-face-silhouette.png"))); // NOI18N
+        Cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/female-hair-shape-and-face-silhouette.png"))); // NOI18N
         Cliente.setText("Cliente");
         Cadastro.add(Cliente);
 
-        Servico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/scissor-and-comb.png"))); // NOI18N
+        Servico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/scissor-and-comb.png"))); // NOI18N
         Servico.setText("Serviço");
         Cadastro.add(Servico);
 
-        usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/engrenagem.png"))); // NOI18N
+        usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/engrenagem.png"))); // NOI18N
         usuario.setText("Usuario");
         Cadastro.add(usuario);
 

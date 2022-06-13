@@ -34,7 +34,7 @@ abstract public class Pessoa {
         this.nome = nome;
         this.sexo = sexo;
         try {
-            this.dataAniv = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(dataAniv);
+            this.dataAniv = new SimpleDateFormat("dd/MM/yyyy").parse(dataAniv);
         } catch (ParseException ex) {
             Logger.getLogger(Pessoa.class.getName()).log(Level.SEVERE, null, ex);
         }

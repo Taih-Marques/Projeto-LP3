@@ -94,8 +94,8 @@ public class Login extends javax.swing.JFrame {
 
     private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
         // executa botao entrar
-           this.controladores.fizTarefa();
-         
+           // this.controladores.fizTarefa();
+            this.controladores.entrarNoSistema();
     }//GEN-LAST:event_EntrarActionPerformed
 
     /**

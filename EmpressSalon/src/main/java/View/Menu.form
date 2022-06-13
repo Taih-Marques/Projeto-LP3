@@ -12,7 +12,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="Cliente">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/imagens/icons/female-hair-shape-and-face-silhouette.png"/>
+                  <Image iconType="3" name="/female-hair-shape-and-face-silhouette.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cliente"/>
               </Properties>
@@ -20,7 +20,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="Servico">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/imagens/icons/scissor-and-comb.png"/>
+                  <Image iconType="3" name="/scissor-and-comb.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Servi&#xe7;o"/>
               </Properties>
@@ -28,7 +28,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="usuario">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/imagens/icons/engrenagem.png"/>
+                  <Image iconType="3" name="/engrenagem.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Usuario"/>
               </Properties>
