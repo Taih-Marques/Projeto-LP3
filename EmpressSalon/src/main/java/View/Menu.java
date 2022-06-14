@@ -4,17 +4,22 @@
  */
 package View;
 
+import Controladores.MenuControl;
+
 /**
  *
  * @author Tay
  */
 public class Menu extends javax.swing.JFrame {
 
+    private final MenuControl control;
+
     /**
      * Creates new form Menu
      */
     public Menu() {
         initComponents();
+        this.control = new MenuControl(this);
     }
 
     /**
@@ -33,6 +38,7 @@ public class Menu extends javax.swing.JFrame {
         Servico = new javax.swing.JMenuItem();
         usuario = new javax.swing.JMenuItem();
         operacao = new javax.swing.JMenu();
+        Agenda = new javax.swing.JMenuItem();
         Relatorio = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,6 +62,16 @@ public class Menu extends javax.swing.JFrame {
         MenuOpcao.add(Cadastro);
 
         operacao.setText("Operação");
+
+        Agenda.setIcon(new javax.swing.ImageIcon("C:\\Users\\Tay\\Documents\\GitHub\\Projeto-LP3\\EmpressSalon\\src\\main\\resources\\View\\imagens\\icons\\agenda-icon.png")); // NOI18N
+        Agenda.setText("Agenda");
+        Agenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgendaActionPerformed(evt);
+            }
+        });
+        operacao.add(Agenda);
+
         MenuOpcao.add(operacao);
 
         Relatorio.setText("Relatorio");
@@ -78,6 +94,11 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void AgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgendaActionPerformed
+        this.control.navegarParaAgenda();
+        
+    }//GEN-LAST:event_AgendaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -115,6 +136,7 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Agenda;
     private javax.swing.JMenu Cadastro;
     private javax.swing.JMenuItem Cliente;
     private javax.swing.JLabel FundoMenu;

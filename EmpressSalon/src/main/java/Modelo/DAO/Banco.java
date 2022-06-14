@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Modelo.DAO;
 
 import Modelo.Agendamento;
@@ -33,7 +28,7 @@ public class Banco {
         
         //criando elementos
         
-        Usuario usuario1 = new Usuario(1, "Cabelereira", 'M', "09/05/1996", "30212121", "cabelereira@empresssalon.com", "521454123", "empress", "administrador");
+        Usuario usuario1 = new Usuario(1, "empress", 'M', "09/05/1996", "30212121", "cabelereira@empresssalon.com", "521454123", "empress", "administrador");
         Usuario usuario2 = new Usuario(2, "taih", 'M', "09/05/1996", "30212122", "estagiaria@empresssalon.com", "451244123", "estagiaria", "funcionario");
          
         Cliente cliente1 = new Cliente(1, "Suzana Santos", 'M', "30/01/1995", "30212126", "suzana@gmail.com", "5142487", "Rua Treze de Maio",  "45662216");

@@ -23,28 +23,30 @@ public class LoginControl {
         this.view = view;
         this.helper = new LoginHelper(view);
     }
-    public void entrarNoSistema(){ 
+
+    public void entrarNoSistema() {
         //pegar um usuario da view    
         Usuario usuario = helper.obterModel();
-       
+
         //pesquisar no banco
-           UsuarioDAO usuarioDAO = new UsuarioDAO();
-           Usuario  usuarioAutenticado = usuarioDAO.selectPorNomeESenha(usuario);
-           
-       if(usuarioAutenticado != null){
-           //navegar para menu
-           Menu menu = new Menu();
-           menu.setVisible(true);
-       }else{
-           view.exibeMensagem("Usuario ou senha invalidos");
-       }
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        Usuario usuarioAutenticado = usuarioDAO.selectPorNomeESenha(usuario);
         //se ambos forem iguais, redirecionar pro menu
         // se nao, mostrar msg de usuario ou senha incorreta
-        
+        if (usuarioAutenticado != null) {
+            //navegar para menu
+            Menu menu = new Menu();
+            menu.setVisible(true);
+            this.view.dispose();
+        } else {
+            view.exibeMensagem("Usuario ou senha invalidos");
+        }
+
     }
-    public void fizTarefa(){
+
+    public void fizTarefa() {
         System.out.println("Busca no banco de Dados ");
         this.view.exibeMensagem("Executado");
     }
-    
+
 }
