@@ -8,7 +8,7 @@ package Modelo.DAO;
 import Modelo.Cliente;
 import java.util.ArrayList;
 
-
+//sofrimento nosso de cada dia
 public class ClienteDAO {
     
     
@@ -58,6 +58,7 @@ public class ClienteDAO {
      */
     public ArrayList<Cliente> selectAll(){
         return Banco.cliente;
+        
     }
     
     /**
