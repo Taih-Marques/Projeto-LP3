@@ -4,6 +4,7 @@
  */
 package Controladores;
 
+import Controladores.ajudah.AgendaHelper;
 import Modelo.Agendamento;
 import Modelo.DAO.AgendamentoDAO;
 import View.Agenda;
@@ -15,9 +16,11 @@ import java.util.ArrayList;
  */
 public class AgendaControl {
     private final Agenda view;
+    private final AgendaHelper ajudah;
 
     public AgendaControl(Agenda view) {
         this.view = view;
+        this.ajudah = new AgendaHelper(view);
     }
     
     public void attTabela(){
@@ -26,6 +29,7 @@ public class AgendaControl {
         ArrayList<Agendamento> agendamentos = agendaDao.selectAll();
         
         //exibir a lista na view
+        
         
         
     }
