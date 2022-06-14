@@ -4,17 +4,23 @@
  */
 package View;
 
+import Controladores.AgendaControl;
+
 /**
  *
  * @author Tay
  */
 public class Agenda extends javax.swing.JFrame {
+    
+    private final AgendaControl control;
 
     /**
      * Creates new form Agenda
      */
     public Agenda() {
         initComponents();
+        control = new AgendaControl(this);
+        iniciar();
     }
 
     /**
@@ -48,7 +54,7 @@ public class Agenda extends javax.swing.JFrame {
         frameAgenda = new javax.swing.JLabel();
         fundoAgenda = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -272,4 +278,8 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
+
+    private void iniciar() {
+        this.control.attTabela();
+    }
 }
