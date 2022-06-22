@@ -64,6 +64,15 @@ public class AgendaHelper {
             
         }
     }
+
+    public Servico obterServico() {
+       return (Servico) view.getComboServico().getSelectedItem();
+      
+    }
+
+    public void apontarValor(float valor) {
+      view.getTextValor().setText(valor +"");
+    } 
     
     
    

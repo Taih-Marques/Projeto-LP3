@@ -52,6 +52,10 @@ public class AgendaControl {
       
         ajudah.preencherServ(servicos);
     }
-   
+   public void attValor(){
+       Servico servico = ajudah.obterServico();
+       ajudah.apontarValor(servico.getValor());
+       
+   }
     
 }

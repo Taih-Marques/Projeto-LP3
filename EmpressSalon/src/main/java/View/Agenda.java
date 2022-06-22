@@ -7,6 +7,7 @@ package View;
 import Controladores.AgendaControl;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -108,7 +109,12 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(ScrollObs, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 430, 120));
 
-        getContentPane().add(ComboServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 240, 20));
+        ComboServico.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ComboServicoItemStateChanged(evt);
+            }
+        });
+        getContentPane().add(ComboServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 240, 30));
 
         ComboCliente.setToolTipText("");
         ComboCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -116,35 +122,35 @@ public class Agenda extends javax.swing.JFrame {
                 ComboClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(ComboCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 240, 20));
+        getContentPane().add(ComboCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 240, 30));
 
         TextHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextHoraActionPerformed(evt);
             }
         });
-        getContentPane().add(TextHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 240, 20));
+        getContentPane().add(TextHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 240, 30));
 
         TextData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextDataActionPerformed(evt);
             }
         });
-        getContentPane().add(TextData, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 240, 20));
+        getContentPane().add(TextData, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 240, 30));
 
         TextValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextValorActionPerformed(evt);
             }
         });
-        getContentPane().add(TextValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 240, 20));
+        getContentPane().add(TextValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 240, 30));
 
         TextID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextIDActionPerformed(evt);
             }
         });
-        getContentPane().add(TextID, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 240, 20));
+        getContentPane().add(TextID, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 240, 30));
 
         Obs.setFont(new java.awt.Font("Por Siempre Gótica", 0, 18)); // NOI18N
         Obs.setForeground(new java.awt.Color(255, 255, 255));
@@ -154,32 +160,32 @@ public class Agenda extends javax.swing.JFrame {
         Hora.setFont(new java.awt.Font("Por Siempre Gótica", 0, 18)); // NOI18N
         Hora.setForeground(new java.awt.Color(255, 255, 255));
         Hora.setText("Hora");
-        getContentPane().add(Hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 60, 40));
+        getContentPane().add(Hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 60, 30));
 
         Data.setFont(new java.awt.Font("Por Siempre Gótica", 0, 18)); // NOI18N
         Data.setForeground(new java.awt.Color(255, 255, 255));
         Data.setText("Data");
-        getContentPane().add(Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 60, 40));
+        getContentPane().add(Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 50, 30));
 
         Valor.setFont(new java.awt.Font("Por Siempre Gótica", 0, 18)); // NOI18N
         Valor.setForeground(new java.awt.Color(255, 255, 255));
         Valor.setText("Valor R$");
-        getContentPane().add(Valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, -1, 40));
+        getContentPane().add(Valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, -1, -1));
 
         Servico.setFont(new java.awt.Font("Por Siempre Gótica", 0, 18)); // NOI18N
         Servico.setForeground(new java.awt.Color(255, 255, 255));
         Servico.setText("Serviço");
-        getContentPane().add(Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 50, 40));
+        getContentPane().add(Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 50, 30));
 
         Cliente.setFont(new java.awt.Font("Por Siempre Gótica", 0, 18)); // NOI18N
         Cliente.setForeground(new java.awt.Color(255, 255, 255));
         Cliente.setText("Cliente");
-        getContentPane().add(Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 50, 40));
+        getContentPane().add(Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 50, 30));
 
         id.setFont(new java.awt.Font("Por Siempre Gótica", 0, 18)); // NOI18N
         id.setForeground(new java.awt.Color(255, 255, 255));
         id.setText("Codigo");
-        getContentPane().add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 50, 40));
+        getContentPane().add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 50, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Por Siempre Gótica", 0, 24)); // NOI18N
@@ -219,6 +225,10 @@ public class Agenda extends javax.swing.JFrame {
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void ComboServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ComboServicoItemStateChanged
+        this.control.attValor();
+    }//GEN-LAST:event_ComboServicoItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -283,6 +293,8 @@ public class Agenda extends javax.swing.JFrame {
         this.control.attTabela();
         this.control.attCliente();
         this.control.attServico();
+        this.control.attValor();
+        
     }
 
     public JComboBox<String> getComboCliente() {
@@ -309,6 +321,15 @@ public class Agenda extends javax.swing.JFrame {
         this.TabAgendamento = TabAgendamento;
     }
 
+    public JTextField getTextValor() {
+        return TextValor;
+    }
+
+    public void setTextValor(JTextField TextValor) {
+        this.TextValor = TextValor;
+    }
+    
+    
    
     
 }
