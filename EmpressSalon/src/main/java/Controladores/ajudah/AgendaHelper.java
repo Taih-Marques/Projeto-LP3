@@ -5,8 +5,11 @@
 package Controladores.ajudah;
 
 import Modelo.Agendamento;
+import Modelo.Cliente;
+import Modelo.Servico;
 import View.Agenda;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -42,6 +45,26 @@ public class AgendaHelper {
         }
         
     }
+
+    public void preencherCli(ArrayList<Cliente> clientes) {
+      DefaultComboBoxModel comboBoxModel = (DefaultComboBoxModel) view.getComboCliente().getModel();
+      
+        for (Cliente cliente : clientes) {
+            comboBoxModel.addElement(cliente);//truk aq
+            
+        }
+    }
+
+    public void preencherServ(ArrayList<Servico> servicos) {
+       
+       DefaultComboBoxModel comboBoxModel = (DefaultComboBoxModel) view.getComboServico().getModel();
+       
+        for (Servico servico : servicos) {
+            comboBoxModel.addElement(servico);
+            
+        }
+    }
+    
     
    
     

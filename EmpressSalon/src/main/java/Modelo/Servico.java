@@ -31,7 +31,10 @@ public class Servico {
     public void setId(int id) {
         this.id = id;
     }
-    
+    @Override
+    public String toString(){
+        return getDescricao();
+    }
     
     
 }

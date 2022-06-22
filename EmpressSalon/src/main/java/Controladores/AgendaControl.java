@@ -6,7 +6,11 @@ package Controladores;
 
 import Controladores.ajudah.AgendaHelper;
 import Modelo.Agendamento;
+import Modelo.Cliente;
 import Modelo.DAO.AgendamentoDAO;
+import Modelo.DAO.ClienteDAO;
+import Modelo.DAO.ServicoDAO;
+import Modelo.Servico;
 import View.Agenda;
 import java.util.ArrayList;
 
@@ -32,5 +36,22 @@ public class AgendaControl {
         ajudah.preencherTab(agendamentos);
         
     }
+    public void attCliente(){
+        //buscar clientes no Banco
+        ClienteDAO clienteDAO= new ClienteDAO();
+        ArrayList<Cliente> clientes = clienteDAO.selectAll();
+        
+        //Exibir clientes no combobox cliente
+        ajudah.preencherCli(clientes);
+        
+    }
+
+    public void attServico() {
+        ServicoDAO servicoDAO = new ServicoDAO();
+        ArrayList<Servico> servicos = servicoDAO.selectAll();     
+      
+        ajudah.preencherServ(servicos);
+    }
+   
     
 }

@@ -5,6 +5,7 @@
 package View;
 
 import Controladores.AgendaControl;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 
 /**
@@ -107,7 +108,6 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(ScrollObs, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 430, 120));
 
-        ComboServico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Corte", "Makeup", "Penteado", "Unha - mão", "Unha - Pé", "Unha - Combo", "Tintura", " " }));
         getContentPane().add(ComboServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 240, 20));
 
         ComboCliente.setToolTipText("");
@@ -132,7 +132,6 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(TextData, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 240, 20));
 
-        TextValor.setText("0");
         TextValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextValorActionPerformed(evt);
@@ -186,7 +185,7 @@ public class Agenda extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Por Siempre Gótica", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("AGENDA");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 130, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, 130, -1));
 
         frameAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Agenda-PainelFundo.png"))); // NOI18N
         getContentPane().add(frameAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 1010, 520));
@@ -282,6 +281,24 @@ public class Agenda extends javax.swing.JFrame {
 
     private void iniciar() {
         this.control.attTabela();
+        this.control.attCliente();
+        this.control.attServico();
+    }
+
+    public JComboBox<String> getComboCliente() {
+        return ComboCliente;
+    }
+
+    public void setComboCliente(JComboBox<String> ComboCliente) {
+        this.ComboCliente = ComboCliente;
+    }
+
+    public JComboBox<String> getComboServico() {
+        return ComboServico;
+    }
+
+    public void setComboServico(JComboBox<String> ComboServico) {
+        this.ComboServico = ComboServico;
     }
 
     public JTable getTabAgendamento() {
