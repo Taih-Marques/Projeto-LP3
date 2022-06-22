@@ -45,6 +45,12 @@ public class Agendamento {
     public float getValor() {return valor;}
     public void setValor(float valor) {this.valor = valor;}
     public Date getData() {return data;}
+    public String getDataForm(){
+       return new SimpleDateFormat("dd/MM/yyyy").format(data);
+    }
+    public String getHoraForm(){
+        return new SimpleDateFormat("HH:mm").format(data);
+    }
     public void setData(Date data) {this.data = data;}
     public String getObs() {return obs;}
     public void setObs(String obs) {this.obs = obs;}

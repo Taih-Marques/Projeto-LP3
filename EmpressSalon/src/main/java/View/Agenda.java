@@ -5,6 +5,7 @@
 package View;
 
 import Controladores.AgendaControl;
+import javax.swing.JTable;
 
 /**
  *
@@ -33,7 +34,7 @@ public class Agenda extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TabAgendamento = new javax.swing.JTable();
         jToggleButton1 = new javax.swing.JToggleButton();
         ScrollObs = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -59,7 +60,7 @@ public class Agenda extends javax.swing.JFrame {
 
         jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TabAgendamento.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -85,7 +86,7 @@ public class Agenda extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TabAgendamento);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 830, 210));
 
@@ -264,6 +265,7 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JLabel Obs;
     private javax.swing.JScrollPane ScrollObs;
     private javax.swing.JLabel Servico;
+    private javax.swing.JTable TabAgendamento;
     private javax.swing.JTextField TextData;
     private javax.swing.JTextField TextHora;
     private javax.swing.JTextField TextID;
@@ -274,7 +276,6 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JLabel id;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
@@ -282,4 +283,15 @@ public class Agenda extends javax.swing.JFrame {
     private void iniciar() {
         this.control.attTabela();
     }
+
+    public JTable getTabAgendamento() {
+        return TabAgendamento;
+    }
+
+    public void setTabAgendamento(JTable TabAgendamento) {
+        this.TabAgendamento = TabAgendamento;
+    }
+
+   
+    
 }

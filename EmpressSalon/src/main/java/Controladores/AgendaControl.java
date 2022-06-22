@@ -27,10 +27,9 @@ public class AgendaControl {
         //Buscar lista com agendamento no Banco
        AgendamentoDAO agendaDao = new AgendamentoDAO();
         ArrayList<Agendamento> agendamentos = agendaDao.selectAll();
-        
         //exibir a lista na view
         
-        
+        ajudah.preencherTab(agendamentos);
         
     }
     

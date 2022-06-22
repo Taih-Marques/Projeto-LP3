@@ -43,7 +43,7 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        FundoMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AgendaFundo.png"))); // NOI18N
+        FundoMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fundo-MenuPrincipal.jpg"))); // NOI18N
 
         Cadastro.setText("Cadastro");
 
@@ -83,9 +83,7 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(FundoMenu)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(FundoMenu)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
