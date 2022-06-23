@@ -6,6 +6,7 @@ package View;
 
 import Controladores.AgendaControl;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -43,8 +44,8 @@ public class Agenda extends javax.swing.JFrame {
         TextObs = new javax.swing.JTextArea();
         ComboServico = new javax.swing.JComboBox<>();
         ComboCliente = new javax.swing.JComboBox<>();
-        TextHora = new javax.swing.JTextField();
-        TextData = new javax.swing.JTextField();
+        TextHora = new javax.swing.JFormattedTextField();
+        TextData = new javax.swing.JFormattedTextField();
         TextValor = new javax.swing.JTextField();
         TextID = new javax.swing.JTextField();
         Obs = new javax.swing.JLabel();
@@ -125,6 +126,7 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(ComboCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 240, 30));
 
+        TextHora.setToolTipText("");
         TextHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextHoraActionPerformed(evt);
@@ -132,6 +134,7 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(TextHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 240, 30));
 
+        TextData.setToolTipText("");
         TextData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextDataActionPerformed(evt);
@@ -217,14 +220,6 @@ public class Agenda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ComboClienteActionPerformed
 
-    private void TextDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextDataActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextDataActionPerformed
-
-    private void TextHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextHoraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextHoraActionPerformed
-
     private void BotaoAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoAgendarActionPerformed
        this.control.agendar();
     }//GEN-LAST:event_BotaoAgendarActionPerformed
@@ -232,6 +227,14 @@ public class Agenda extends javax.swing.JFrame {
     private void ComboServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ComboServicoItemStateChanged
         this.control.attValor();
     }//GEN-LAST:event_ComboServicoItemStateChanged
+
+    private void TextDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextDataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextDataActionPerformed
+
+    private void TextHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextHoraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextHoraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -279,8 +282,8 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JScrollPane ScrollObs;
     private javax.swing.JLabel Servico;
     private javax.swing.JTable TabAgendamento;
-    private javax.swing.JTextField TextData;
-    private javax.swing.JTextField TextHora;
+    private javax.swing.JFormattedTextField TextData;
+    private javax.swing.JFormattedTextField TextHora;
     private javax.swing.JTextField TextID;
     private javax.swing.JTextArea TextObs;
     private javax.swing.JTextField TextValor;
@@ -331,23 +334,7 @@ public class Agenda extends javax.swing.JFrame {
     public void setTextValor(JTextField TextValor) {
         this.TextValor = TextValor;
     }
-
-    public JTextField getTextData() {
-        return TextData;
-    }
-
-    public void setTextData(JTextField TextData) {
-        this.TextData = TextData;
-    }
-
-    public JTextField getTextHora() {
-        return TextHora;
-    }
-
-    public void setTextHora(JTextField TextHora) {
-        this.TextHora = TextHora;
-    }
-
+    
     public JTextField getTextID() {
         return TextID;
     }
@@ -356,6 +343,22 @@ public class Agenda extends javax.swing.JFrame {
         this.TextID = TextID;
     }
 
+    public JFormattedTextField getTextData() {
+        return TextData;
+    }
+
+    public void setTextData(JFormattedTextField TextData) {
+        this.TextData = TextData;
+    }
+
+    public JFormattedTextField getTextHora() {
+        return TextHora;
+    }
+
+    public void setTextHora(JFormattedTextField TextHora) {
+        this.TextHora = TextHora;
+    }
+    
     public JTextArea getTextObs() {
         return TextObs;
     }

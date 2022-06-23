@@ -17,7 +17,7 @@ import View.Menu;
 public class LoginControl {
 
     private final Login view;
-    private LoginHelper helper;
+    private final LoginHelper helper;
 
     public LoginControl(Login view) {
         this.view = view;
@@ -26,7 +26,7 @@ public class LoginControl {
 
     public void entrarNoSistema() {
         //pegar um usuario da view    
-        Usuario usuario = helper.obterModel();
+        Usuario usuario = helper.obterModelo();
 
         //pesquisar no banco
         UsuarioDAO usuarioDAO = new UsuarioDAO();

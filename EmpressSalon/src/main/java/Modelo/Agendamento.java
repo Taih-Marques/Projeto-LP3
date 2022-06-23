@@ -38,7 +38,7 @@ public class Agendamento {
 
     public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, String obs) {
         this(id,cliente,servico,valor,data);
-        this.obs=obs;
+        this.obs = obs;
     }
     
 
