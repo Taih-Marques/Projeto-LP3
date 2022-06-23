@@ -4,6 +4,7 @@
  */
 package Controladores.ajudah;
 
+import Modelo.Agendamento;
 import Modelo.Usuario;
 import View.Login;
 
@@ -43,7 +44,7 @@ public class LoginHelper implements HelpGeral {
     }
 
     @Override
-    public Object obterModelo() {
+    public Agendamento obterModelo() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

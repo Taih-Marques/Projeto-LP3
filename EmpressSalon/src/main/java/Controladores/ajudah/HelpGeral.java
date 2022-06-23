@@ -4,12 +4,14 @@
  */
 package Controladores.ajudah;
 
+import Modelo.Agendamento;
+
 /**
  *
  * @author Tay
  */
 public interface HelpGeral {
-    public abstract Object obterModelo();
+    public abstract Agendamento obterModelo();
     
     public abstract void limparTela();
 }
