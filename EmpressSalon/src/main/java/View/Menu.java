@@ -41,7 +41,7 @@ public class Menu extends javax.swing.JFrame {
         Agenda = new javax.swing.JMenuItem();
         Relatorio = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         FundoMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fundo-MenuPrincipal.jpg"))); // NOI18N
 

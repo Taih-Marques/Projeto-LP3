@@ -1,4 +1,4 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -25,7 +25,7 @@ public class AgendaHelper implements HelpGeral{
 
     public void preencherTab(ArrayList<Agendamento> agendamentos) {
         
-        DefaultTableModel tableModel = (DefaultTableModel)view.getTabAgendamento().getModel();
+        DefaultTableModel tableModel = (DefaultTableModel) view.getTabAgendamento().getModel();
         tableModel.setNumRows(0);
         
         ///percorrer a lista preenchendo o tabModel

@@ -139,6 +139,7 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(TextData, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 240, 30));
 
+        TextValor.setText("0");
         TextValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextValorActionPerformed(evt);
@@ -146,6 +147,7 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(TextValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 240, 30));
 
+        TextID.setText("0");
         TextID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextIDActionPerformed(evt);
@@ -297,7 +299,7 @@ public class Agenda extends javax.swing.JFrame {
         this.control.attValor();
         
     }
-
+    
     public JComboBox<String> getComboCliente() {
         return ComboCliente;
     }

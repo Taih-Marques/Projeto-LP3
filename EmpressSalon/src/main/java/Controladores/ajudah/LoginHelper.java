@@ -4,7 +4,6 @@
  */
 package Controladores.ajudah;
 
-import Modelo.Agendamento;
 import Modelo.Usuario;
 import View.Login;
 
@@ -20,12 +19,11 @@ public class LoginHelper implements HelpGeral {
         this.view = view;
     }
 
-    public Usuario obterModel() {
+    @Override
+    public Usuario obterModelo() {
         String nome = view.getCampoUsuario().getText();
         String senha = view.getSenhaUsuario().getText();
-
         Usuario modelo = new Usuario(0, nome, senha);
-
         return modelo;
     }
 
@@ -43,9 +41,5 @@ public class LoginHelper implements HelpGeral {
         view.getSenhaUsuario().setText("");
     }
 
-    @Override
-    public Agendamento obterModelo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
 }

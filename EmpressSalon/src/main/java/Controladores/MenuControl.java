@@ -22,7 +22,7 @@ public class MenuControl {
      
         Agenda agenda = new Agenda();
         agenda.setVisible(true);
-        this.view.dispose();
+       // this.view.dispose();
     
     }
     
