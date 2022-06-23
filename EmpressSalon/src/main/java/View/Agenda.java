@@ -7,6 +7,7 @@ package View;
 import Controladores.AgendaControl;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
@@ -37,9 +38,9 @@ public class Agenda extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         TabAgendamento = new javax.swing.JTable();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        BotaoAgendar = new javax.swing.JToggleButton();
         ScrollObs = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        TextObs = new javax.swing.JTextArea();
         ComboServico = new javax.swing.JComboBox<>();
         ComboCliente = new javax.swing.JComboBox<>();
         TextHora = new javax.swing.JTextField();
@@ -92,20 +93,20 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 830, 210));
 
-        jToggleButton1.setBackground(new java.awt.Color(168, 113, 5));
-        jToggleButton1.setFont(new java.awt.Font("Por Siempre Gótica", 0, 24)); // NOI18N
-        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton1.setText("Agendar");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotaoAgendar.setBackground(new java.awt.Color(168, 113, 5));
+        BotaoAgendar.setFont(new java.awt.Font("Por Siempre Gótica", 0, 24)); // NOI18N
+        BotaoAgendar.setForeground(new java.awt.Color(255, 255, 255));
+        BotaoAgendar.setText("Agendar");
+        BotaoAgendar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                BotaoAgendarActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 430, 40));
+        getContentPane().add(BotaoAgendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 430, 40));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        ScrollObs.setViewportView(jTextArea1);
+        TextObs.setColumns(20);
+        TextObs.setRows(5);
+        ScrollObs.setViewportView(TextObs);
 
         getContentPane().add(ScrollObs, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 430, 120));
 
@@ -222,9 +223,9 @@ public class Agenda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TextHoraActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    private void BotaoAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoAgendarActionPerformed
+       this.control.agendar();
+    }//GEN-LAST:event_BotaoAgendarActionPerformed
 
     private void ComboServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ComboServicoItemStateChanged
         this.control.attValor();
@@ -266,6 +267,7 @@ public class Agenda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton BotaoAgendar;
     private javax.swing.JLabel Cliente;
     private javax.swing.JComboBox<String> ComboCliente;
     private javax.swing.JComboBox<String> ComboServico;
@@ -278,6 +280,7 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JTextField TextData;
     private javax.swing.JTextField TextHora;
     private javax.swing.JTextField TextID;
+    private javax.swing.JTextArea TextObs;
     private javax.swing.JTextField TextValor;
     private javax.swing.JLabel Valor;
     private javax.swing.JLabel frameAgenda;
@@ -285,8 +288,6 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JLabel id;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 
     private void iniciar() {
@@ -327,6 +328,38 @@ public class Agenda extends javax.swing.JFrame {
 
     public void setTextValor(JTextField TextValor) {
         this.TextValor = TextValor;
+    }
+
+    public JTextField getTextData() {
+        return TextData;
+    }
+
+    public void setTextData(JTextField TextData) {
+        this.TextData = TextData;
+    }
+
+    public JTextField getTextHora() {
+        return TextHora;
+    }
+
+    public void setTextHora(JTextField TextHora) {
+        this.TextHora = TextHora;
+    }
+
+    public JTextField getTextID() {
+        return TextID;
+    }
+
+    public void setTextID(JTextField TextID) {
+        this.TextID = TextID;
+    }
+
+    public JTextArea getTextObs() {
+        return TextObs;
+    }
+
+    public void setTextObs(JTextArea TextObs) {
+        this.TextObs = TextObs;
     }
     
     

@@ -11,7 +11,7 @@ import View.Login;
  *
  * @author Tay
  */
-public class LoginHelper {
+public class LoginHelper implements HelpGeral {
 
     private final Login view;
 

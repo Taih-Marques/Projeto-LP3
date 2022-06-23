@@ -19,6 +19,7 @@ import java.util.ArrayList;
  * @author Tay
  */
 public class AgendaControl {
+
     private final Agenda view;
     private final AgendaHelper ajudah;
 
@@ -26,36 +27,48 @@ public class AgendaControl {
         this.view = view;
         this.ajudah = new AgendaHelper(view);
     }
-    
-    public void attTabela(){
+
+    public void attTabela() {
         //Buscar lista com agendamento no Banco
-       AgendamentoDAO agendaDao = new AgendamentoDAO();
+        AgendamentoDAO agendaDao = new AgendamentoDAO();
         ArrayList<Agendamento> agendamentos = agendaDao.selectAll();
         //exibir a lista na view
-        
+
         ajudah.preencherTab(agendamentos);
-        
+
     }
-    public void attCliente(){
+
+    public void attCliente() {
         //buscar clientes no Banco
-        ClienteDAO clienteDAO= new ClienteDAO();
+        ClienteDAO clienteDAO = new ClienteDAO();
         ArrayList<Cliente> clientes = clienteDAO.selectAll();
-        
+
         //Exibir clientes no combobox cliente
         ajudah.preencherCli(clientes);
-        
+
     }
 
     public void attServico() {
         ServicoDAO servicoDAO = new ServicoDAO();
-        ArrayList<Servico> servicos = servicoDAO.selectAll();     
-      
+        ArrayList<Servico> servicos = servicoDAO.selectAll();
+
         ajudah.preencherServ(servicos);
     }
-   public void attValor(){
-       Servico servico = ajudah.obterServico();
-       ajudah.apontarValor(servico.getValor());
-       
-   }
-    
+
+    public void attValor() {
+        Servico servico = ajudah.obterServico();
+        ajudah.apontarValor(servico.getValor());
+
+    }
+
+    public void agendar() {
+        //buscar da tela objeto agendamento
+        Agendamento agendamento = ajudah.obterModelo();
+        //salvar banco de dado
+        new AgendamentoDAO().insert(agendamento);
+        //inserir na tabela
+        attTabela();
+        ajudah.limparTela();
+    }
+
 }

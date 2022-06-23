@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Tay
  */
-public class AgendaHelper {
+public class AgendaHelper implements HelpGeral{
     private final Agenda view;
 
     public AgendaHelper(Agenda view) {
@@ -65,6 +65,10 @@ public class AgendaHelper {
         }
     }
 
+    public Cliente obterCliente() {
+       return (Cliente) view.getComboCliente().getSelectedItem();
+      
+    }
     public Servico obterServico() {
        return (Servico) view.getComboServico().getSelectedItem();
       
@@ -73,6 +77,33 @@ public class AgendaHelper {
     public void apontarValor(float valor) {
       view.getTextValor().setText(valor +"");
     } 
+
+    @Override
+    public Agendamento obterModelo() {
+        String idString = view.getTextID().getText();
+        int id = Integer.parseInt(idString);
+        Cliente cliente= obterCliente();
+        Servico servico = obterServico();
+        String valorString= view.getTextValor().getText();
+        float valor= Float.parseFloat(valorString);
+        String data= view.getTextData().getText();
+        String hora= view.getTextHora().getText();
+        String dataHora= data + " " + hora;
+        String obs = view.getTextObs().getText();
+        
+        Agendamento agendamento= new Agendamento(id, cliente, servico, valor, dataHora, obs);
+        return agendamento;
+         //new Agendamento(); 
+         
+    }
+
+    @Override
+    public void limparTela() {
+        view.getTextID().setText("");
+        view.getTextData().setText("");
+        view.getTextHora().setText("");
+        view.getTextObs().setText("");
+    }
     
     
    
