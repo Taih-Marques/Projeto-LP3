@@ -50,7 +50,7 @@ public class Banco {
         Servico servico6 = new Servico(6, "Penteados", 100);
 
         Agendamento agendamento1 = new Agendamento(1, cliente1, servico2, 150, "14/07/2022 09:30");
-        Agendamento agendamento2 = new Agendamento(2, cliente3, servico4, 150, "14/07/2022 10:00");
+        Agendamento agendamento2 = new Agendamento(2, cliente3, servico5, 40, "14/07/2022 10:00");
         Agendamento agendamento3 = new Agendamento(3, cliente4, servico1, 180, "14/07/2022 10:30");
         
         //Adiciona Elementos na lista

@@ -99,7 +99,7 @@ public class AgendaHelper implements HelpGeral{
 
     @Override
     public void limparTela() {
-        view.getTextID().setText("");
+        view.getTextID().setText("0");
         view.getTextData().setText("");
         view.getTextHora().setText("");
         view.getTextObs().setText("");
