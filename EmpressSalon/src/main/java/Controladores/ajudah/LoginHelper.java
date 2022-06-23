@@ -36,9 +36,15 @@ public class LoginHelper implements HelpGeral {
         view.getSenhaUsuario().setText(senha);
     }
 
+    @Override
     public void limparTela() {
         view.getCampoUsuario().setText("");
         view.getSenhaUsuario().setText("");
+    }
+
+    @Override
+    public Object obterModelo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }
