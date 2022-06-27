@@ -3,18 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package email;
+package Servico;
 
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
 
-/**
- * Classe responsável por enviar E-mail.
- * @author Denner Dias
- */
+
 public class Email {
-    static final String REMETENTE_NOME = "sistemaservicedeskauditoria@gmail.com";
+    static final String REMETENTE_NOME = "sistemaservice@gmail.com";
     static final String REMETENTE_SENHA = "xxxxxxxxxxx";
     private String assunto ;
     private String mensagem;
