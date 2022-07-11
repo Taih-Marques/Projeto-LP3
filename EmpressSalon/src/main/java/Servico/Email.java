@@ -11,8 +11,8 @@ import org.apache.commons.mail.SimpleEmail;
 
 
 public class Email {
-    static final String REMETENTE_NOME = "sistemaservice@gmail.com";
-    static final String REMETENTE_SENHA = "xxxxxxxxxxx";
+    static final String REMETENTE_NOME = "tayhmarques.00@gmail.com";
+    static final String REMETENTE_SENHA = "99050358";
     private String assunto ;
     private String mensagem;
     private String destinatario;
@@ -60,16 +60,17 @@ public class Email {
      */
     public void enviar (){
         SimpleEmail email = new SimpleEmail();
-            email.setSSLOnConnect(true);
-            email.setHostName("smtp.gmail.com");
-            email.setSslSmtpPort("465");
+            email.setSSLOnConnect(true); // faz uma conexao por ssl
+            email.setHostName("smtp.gmail.com"); 
+            email.setSslSmtpPort("587"); //porta padrao
+            email.setStartTLSRequired(true);
        email.setAuthenticator(new DefaultAuthenticator(REMETENTE_NOME, REMETENTE_SENHA));
        try {
            email.setFrom(REMETENTE_NOME);
 
            email.setDebug(true);
 
-           email.setSubject(this.assunto);
+           email.setSubject(this.assunto); //seta p assunto
            email.setMsg(this.mensagem);
            email.addTo(this.destinatario);//por favor trocar antes de testar!!!!
 
