@@ -62,8 +62,11 @@ public class Email {
         SimpleEmail email = new SimpleEmail();
             email.setSSLOnConnect(true); // faz uma conexao por ssl
             email.setHostName("smtp.gmail.com"); 
-            email.setSslSmtpPort("587"); //porta padrao
+            email.setSslSmtpPort("465"); //porta padrao
             email.setStartTLSRequired(true);
+            
+                      
+            
        email.setAuthenticator(new DefaultAuthenticator(REMETENTE_NOME, REMETENTE_SENHA));
        try {
            email.setFrom(REMETENTE_NOME);
