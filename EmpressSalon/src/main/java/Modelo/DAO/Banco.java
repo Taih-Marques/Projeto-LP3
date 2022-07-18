@@ -31,10 +31,10 @@ public class Banco {
         Usuario usuario1 = new Usuario(1, "empress", 'M', "09/05/1996", "30212121", "cabelereira@empresssalon.com", "521454123", "empress", "administrador");
         Usuario usuario2 = new Usuario(2, "taih", 'M', "09/05/1996", "30212122", "estagiaria@empresssalon.com", "451244123", "estagiaria", "funcionario");
          
-        Cliente cliente1 = new Cliente(1, "Suzana Santos", 'M', "30/01/1995", "30212126", "suzana@gmail.com", "5142487", "Rua Treze de Maio",  "45662216");
-        Cliente cliente2 = new Cliente(2, "Paola Nunes", 'F', "30/08/1994", "30212127", "paolanunes@gmail.com", "5142487745", "Rua Cruz de Malta",  "45807000");
-        Cliente cliente3 = new Cliente(3, "Gabriel Simoes", 'M', "24/04/1997", "30212128", "gabrielsimoes@gmail.com", "78451458", "Rua salobrnho 40",  "45662900");
-        Cliente cliente4 = new Cliente(4, "Martha Magda", 'F', "20/08/1995", "30212130", "martinha@gmail.com", "2745487", "Rua Pedro Calmoes 170 ",  "45810000");
+        Cliente cliente1 = new Cliente(1, "Suzana Santos", 'M', "30/01/1995", "30212126", "tayhmarques.00@gmail.com", "5142487", "Rua Treze de Maio",  "45662216");
+        Cliente cliente2 = new Cliente(2, "Paola Nunes", 'F', "30/08/1994", "30212127", "tayhmarques.00@gmail.com", "5142487745", "Rua Cruz de Malta",  "45807000");
+        Cliente cliente3 = new Cliente(3, "Gabriel Simoes", 'M', "24/04/1997", "30212128", "tayhmarques.00@gmail.com", "78451458", "Rua salobrnho 40",  "45662900");
+        Cliente cliente4 = new Cliente(4, "Martha Magda", 'F', "20/08/1995", "30212130", "tayhmarques.00@gmail.com", "2745487", "Rua Pedro Calmoes 170 ",  "45810000");
         Cliente cliente5 = new Cliente(5, "Angra Mainyu", 'F', "13/09/1992", "30212131", "angramainyiu@gmail.com", "4742487", "Rua Marilia Mendonca",  "45810000");
         Cliente cliente6 = new Cliente(6, "Tainah Marques", 'F', "17/08/1994", "302122324", "tayhmarques.00@gmail.com", "78512457", "Rua Joao e Maria",  "45662212");
         Cliente cliente7 = new Cliente(7, "Milena Sampaio", 'F', "25/03/1993", "302121292", "miihsampaio@gmail.com", "4658237314", "Rua Hernani Sa",  "45997800");

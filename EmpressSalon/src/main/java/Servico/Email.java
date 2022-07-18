@@ -11,8 +11,8 @@ import org.apache.commons.mail.SimpleEmail;
 
 
 public class Email {
-    static final String REMETENTE_NOME = "tayhmarques.00@gmail.com";
-    static final String REMETENTE_SENHA = "99050358";
+    static final String REMETENTE_NOME = "tayhmarques.00@hotmail.com";
+    static final String REMETENTE_SENHA = "solange99884290";
     private String assunto ;
     private String mensagem;
     private String destinatario;
@@ -61,8 +61,8 @@ public class Email {
     public void enviar (){
         SimpleEmail email = new SimpleEmail();
             email.setSSLOnConnect(true); // faz uma conexao por ssl
-            email.setHostName("smtp.gmail.com"); 
-            email.setSslSmtpPort("465"); //porta padrao
+            email.setHostName("smtp.office365.com"); 
+            email.setSslSmtpPort("587"); //porta padrao
             email.setStartTLSRequired(true);
             
                       
